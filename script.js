@@ -1,12 +1,14 @@
-window.promises = [];
-	const promise1 = Promise.reject(0);
-const promise2 = new Promise((resolve) => setTimeout(resolve, 100, 'quick'));
-const promise3 = new Promise((resolve) => setTimeout(resolve, 500, 'slow'));
-const promise4 = new Promise((resolve) => setTimeout(resolve, 500, 'slow'));
-const promise5 = new Promise((resolve) => setTimeout(resolve, 500, 'slow'));
-const allPromise = [promise1, promise2,promise3,promise4,promise5];
+window.promises = [
+	promise1 = new Promise((resolve) => setTimeout(resolve, 900, 'quick')),
+promise2 = new Promise((resolve) => setTimesolveout(resolve, 600, 'quick')),
+ promise3 = new Promise((resolve) => setTimeout(resolve, 500, 'slow')),
+ promise4 = new Promise((re) => setTimeout(resolve, 500, 'slow')),
+ promise5 = new Promise((resolve) => setTimeout(resolve, 500, 'slow')),
+// allPromise = [promise1, promise2,promise3,promise4,promise5]
+];
+	
 
-Promise.any(allPromise).then((value) =>{
+Promise.any(promises).then((value) =>{
 	document.getElementById("output").innerHTML=value;
 });
 
